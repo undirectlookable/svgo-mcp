@@ -1,0 +1,38 @@
+{
+  "name": "svgo-mcp",
+  "version": "0.1.1",
+  "description": "MCP server for SVG optimization, based on svgo.",
+  "keywords": [
+    "mcp",
+    "svg",
+    "optimization",
+    "svgo"
+  ],
+  "license": "MIT",
+  "author": "undirectlookable (https://github.com/undirectlookable)",
+  "homepage": "https://github.com/undirectlookable/svgo-mcp",
+  "bugs": "https://github.com/undirectlookable/svgo-mcp/issues",
+  "type": "module",
+  "bin": {
+    "mcp-server-hello": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.3",
+    "svgo": "^4.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "shx": "^0.4.0",
+    "typescript": "^5.9.2"
+  }
+}
